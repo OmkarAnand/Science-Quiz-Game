@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+
+        body{
+            background-image:url("/Images/sciencebg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.h1{
+    font-family:cursive;
+    font-size:150px;
+    font-style: italic;
+    margin-top: 50px;
+    color:#01005e;  
+    text-shadow: 5px 7px 6px  #22267b;
+    display: inline-block;
+    animation: swing 2s infinite ;
+}
+.h3{
+    font-family:cursive;
+    font-size: 50px;
+    margin-top: 100px;
+}
+.container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            margin-top: 100px; 
+            display: flex; 
+            justify-content: space-around; 
+            --quantity:10;
+            animation: rotateCircle 30s infinite linear;
+        }
+        @keyframes rotateCircle {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+#btn1{
+    height: 40px; width: 120px;
+    --position: 1;
+    animation: autoRun 3s infinite linear;
+    animation-delay: 0s;
+    font-weight: bold;
+    transform:rotateY(0deg) translateZ(400px);
+    
+}
+#btn2{
+    height: 40px; width: 120px;
+    --position: 1;
+    animation: autoRun 3s infinite linear;
+    animation-delay: 0s;
+    font-weight: bold;
+    transform: rotateY(120deg) translateZ(400px);
+    
+}
+#btn3{
+    height: 40px; width: 120px;
+    --position: 1;
+    animation: autoRun 3s infinite linear;
+    animation-delay: 0s;
+    font-weight: bold;
+    transform:  rotateY(240deg) translateZ(400px);   
+}
+       
+
+
+    </style>
+
+</head>
+<body>
+
+   <center> <p class="h1">Science Quiz</p></center>
+
+   <center><p class="h3">Choose your class</p></center>
+
+
+<div class="container">
+    <a href="Quiz.html?class=8" class="btn btn-outline-info" id="btn1">Class 8</a> 
+    <a href="Quiz.html?class=9" class="btn btn-outline-info" id="btn2">Class 9</a> 
+    <a href="Quiz.html?class=10" class="btn btn-outline-info" id="btn3">Class 10</a> 
+</div>
+    
+</body>
+</html>
